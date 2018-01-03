@@ -19,7 +19,7 @@
     <nav id="menu">
       <ul>
         <li class="first">&nbsp;</li>
-        <li><a href="#">Mi perfil</a></li>
+        <li><a href="formulario.html">Mi perfil</a></li>
         <li><a href="#">Añadir Artículo</a></li>
         <li><a href="#">Añadir imagen</a></li>
         <li><a href="#">Juegos</a></li>
@@ -32,9 +32,27 @@
   
   <!-- content -->
   <main>
-
-    CODIGO
-
+    <h3>Mi perfil</h3>
+    <form id="myformu" action="#">
+      <label for="name">Nombre</label>
+      <input type="text" name="name" placeholder="Jon" required />
+      <label for="lastname">Apellidos</label>
+      <input type="text" name="lastname" placeholder="Jon" required />
+      <label for="phone">Teléfono</label>
+      <input type="tel" name="phone" placeholder="" pattern="[0-9]{9}" required title="ej: 615 615 615" />
+      <label for="mail">Email</label>
+      <input type="email" name="mail" placeholder="" required />
+      <label for="date">Fecha de nacimiento</label>
+      <input type="date" name="date" placeholder="" required />
+      <label for="height">Altura</label>
+      <input type="number" name="height" pattern="[0-9]{3}" required title="ej: 185" />
+      <label for="color">Color</label>
+      <input type="color" name="color" placeholder="" required />
+      <label for="web">Web</label>
+      <input type="url" name="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required  title="ej: http://www.ejemplo.com" />
+      <input type="submit" value="Save">
+      <input type="reset"  value="Cancel">
+     </form>
   </main>
   <!-- footer -->
   <footer id="footer">
