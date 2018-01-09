@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Práctica HTML51</title>
+</head>
+<body>
+  <div class="flex-container">
+    <!-- menu -->
+    <header id="header">
+      <div class="header-logo">
+        <div class="header-logo-image"><img src="https://placem.at/places?w=100&h=70" title="Blog del Curioso" alt="Blog del Curioso" /></div>
+        <div class="header-logo-name">
+          <h1 class="header-logo-title">Blog del Curioso</h1>
+          <span class="header-logo-subtitle">Tu blog chachiguay</span>
+        </div>
+      </div>
+      
+      <nav id="header-menu" class="header-menu">
+        <ul>
+          <li><a href="formulario.html">Mi perfil</a></li>
+          <li><a href="#">Añadir Artículo</a></li>
+          <li><a href="#">Añadir imagen</a></li>
+          <li><a href="#">Juegos</a></li>
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- content -->
+    <main id="content">
+  		<article itemscope itemtype="http://schema.org/Article"	>
+        <h2> TITULO PRINCIPAL </h2>
+  			
+  				<figure>
+  					<img itemprop="image" alt="Image realidad-virtual" title="Image realidad-virtual" src="http://formato7.com/wp-content/uploads/2017/02/realidad-virtual.jpg">
+  					<figcaption>El futuro ya es un presente</figcaption>
+  				</figure>
+  				<h6>LA REALIDAD VIRTUAL</h6>				
+  				<div class="post-category">
+  				  <a itemprop="articleSection" href="" title="Realidad Virtual">Realidad Virtual</a>
+  				  |
+  				  <a itemprop="articleSection" href="" title="El Presente">El Presente</a>
+  				</div>
+  				<div class="post-author-date">
+  				  Publicado el
+  				  <time itemprop="datePublished" content="2018-01-08" datetime="2018-01-08">8 enero, 2018</time>
+  				  por
+  				  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+  					<span itemprop="name">dCordero</span>
+  				  </span>
+  				</div>
+  				<h3>La Realidad Virtual, un futuro muy presente</h3>
+  				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper ante et turpis rutrum, at tempor elit vulputate. Integer non ornare turpis, sit amet interdum nunc. In dignissim iaculis enim, hendrerit fringilla diam mollis vitae. In in facilisis quam, ut viverra sapien. Donec non maximus turpis, vel tincidunt est. Cras efficitur tincidunt mi, nec ultricies tortor iaculis et. Integer eu maximus lectus. Nulla blandit nibh vel justo porttitor, ac dictum justo dictum. Curabitur nec leo et nisl mollis pharetra sodales molestie sapien. Suspendisse a risus vel orci viverra tempor nec id nulla. Nunc ornare facilisis enim, et molestie metus aliquet nec. Sed varius, arcu sit amet condimentum sodales, libero augue accumsan dui, nec tincidunt ante purus finibus lorem. Donec placerat nulla eu sem malesuada, quis rutrum dolor luctus. Fusce ornare mi diam, hendrerit mattis nulla accumsan vitae. Nulla facilisi. Vivamus dapibus, sapien vel maximus dictum, neque nibh consequat mi, viverra interdum ante neque eu ante. Suspendisse a vulputate ligula. Etiam gravida orci id diam scelerisque, ut sodales risus venenatis. Vivamus ut diam sed arcu aliquam feugiat in quis tellus. Nam hendrerit leo velit, et imperdiet eros tincidunt ut.</p>
+  			</article>    
+  		
+	</main>
+    
+    <!-- footer -->
+    <footer id="footer">
+      <nav class="footer-menu"><ul><li>Inicio</li><li>Ayuda</li><li>Contacto</li></ul></nav>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Práctica HTML51</title>
+</head>
+<body>
+  <div class="flex-container">
+    <!-- menu -->
+    <header id="header">
+      <div class="header-logo">
+        <div class="header-logo-image"><img src="https://placem.at/places?w=100&h=70" title="Blog del Curioso" alt="Blog del Curioso" /></div>
+        <div class="header-logo-name">
+          <h1 class="header-logo-title">Blog del Curioso</h1>
+          <span class="header-logo-subtitle">Tu blog chachiguay</span>
+        </div>
+      </div>
+      
+      <nav id="header-menu" class="header-menu">
+        <ul>
+          <li><a href="formulario.html">Mi perfil</a></li>
+          <li><a href="#">Añadir Artículo</a></li>
+          <li><a href="#">Añadir imagen</a></li>
+          <li><a href="#">Juegos</a></li>
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- content -->
+    <main id="content">
+      
+      <section>
+        <h3 class="home-section-title"> Top 6 artículos</h3>
+
+        <div class="section-list-posts">
+          <article class="section-list-article cat-dibus" itemscope itemtype="http://schema.org/Article">
+            <div class="post-image">
+              <a itemprop="url" href="./articulo.html" title="Perzys perzys">
+                <img itemprop="image" src="https://placem.at/places?w=300&h=250&random=perico" title="Perzys perzys" alt="Perzys perzys" /></a>
+            </div>
+            <div class="post-content">
+              <div class="post-category">
+                <a itemprop="articleSection" href="" title="Los Teleñecos">Los Teleñecos</a>
+                |
+                <a itemprop="articleSection" href="" title="Dibus">Dibus</a>
+              </div>
+              <div class="post-author-date">
+                Publicado el
+                <time itemprop="datePublished" content="2018-01-02" datetime="2018-01-02">2 enero, 2018</time>
+                por
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">Pedrito</span>
+                </span>
+              </div>
+              <header class="post-header">
+                <a itemprop="url" href="./articulo.html" title="Perzys perzys">
+                  <h2 itemprop="headline name" class="post-title">Perzys perzys</h2>
+                  <p itemprop="description" class="post-entry">Perzys ynoma perzys sikagon lys hen nuqir diniluks erinis avy</p>
+                </a>
+              </header>
+            </div>
+          </article>
+
+          <article class="section-list-article cat-dibus" itemscope itemtype="http://schema.org/Article">
+            <div class="post-image">
+              <a itemprop="url" href="./articulo.html" title="Noticia 2">
+                <img itemprop="image" src="https://placem.at/places?w=300&h=250&random=perico" title="Noticia 2" alt="Noticia 2" /></a>
+            </div>
+            <div class="post-content">
+              <div class="post-category">
+                <a itemprop="articleSection" href="" title="Bob Esponja">Bob Esponja</a>
+                |
+                <a itemprop="articleSection" href="" title="Dibus">Dibus</a>
+              </div>
+              <div class="post-author-date">
+                Publicado el
+                <time itemprop="datePublished" content="2018-01-01" datetime="2018-01-01">1 enero, 2018</time>
+                por
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">Calamardo</span>
+                </span>
+              </div>
+              <header class="post-header">
+                <a itemprop="url" href="./articulo.html" title="Noticia 2">
+                  <h2 itemprop="headline name" class="post-title">Noticia 2</h2>
+                  <p itemprop="description" class="post-entry">Valarbb kostilus zyhsskori ia</p>
+                </a>
+              </header>
+            </div>
+          </article>
+
+          <article class="section-list-article cat-antano" itemscope itemtype="http://schema.org/Article">
+            <div class="post-image">
+              <a itemprop="url" href="./articulo.html" title="Pier Nodoyuna ataca de nuevo">
+                <img itemprop="image" src="https://placem.at/places?w=300&h=250&random=perico" title="Pier Nodoyuna ataca de nuevo" alt="Pier Nodoyuna ataca de nuevo" /></a>
+            </div>
+            <div class="post-content">
+              <div class="post-category">
+                <a itemprop="articleSection" href="" title="Autos Locos">Autos Locos</a>
+                |
+                <a itemprop="articleSection" href="" title="Antaño">Antaño</a>
+              </div>
+              <div class="post-author-date">
+                Publicado el
+                <time itemprop="datePublished" content="2017-12-24" datetime="2017-12-24">24 diciembre, 2017</time>
+                por
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">Patan</span>
+                </span>
+              </div>
+              <header class="post-header">
+                <a itemprop="url" href="./articulo.html" title="Pier Nodoyuna ataca de nuevo">
+                  <h2 itemprop="headline name" class="post-title">Pier Nodoyuna ataca de nuevo</h2>
+                  <p itemprop="description" class="post-entry">Pier Nodoyuna ha fichado como compañero de Fernando Alonso para este 2018</p>
+                </a>
+              </header>
+            </div>
+          </article>
+
+          <article class="section-list-article cat-libros" itemscope itemtype="http://schema.org/Article">
+            <div class="post-image">
+              <a itemprop="url" href="./articulo.html" title="Fray Perico acusado de maltrato animal">
+                <img itemprop="image" src="https://placem.at/places?w=300&h=250&random=perico" title="Fray Perico acusado de maltrato animal" alt="Fray Perico acusado de maltrato animal" /></a>
+            </div>
+            <div class="post-content">
+              <div class="post-category">
+                <a itemprop="articleSection" href="" title="Clasicos">Clasicos</a>
+                |
+                <a itemprop="articleSection" href="" title="Libros">Libros</a>
+              </div>
+              <div class="post-author-date">
+                Publicado el
+                <time itemprop="datePublished" content="2017-12-14" datetime="2017-12-14">14 diciembre, 2017</time>
+                por
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">Perico</span>
+                </span>
+              </div>
+              <header class="post-header">
+                <a itemprop="url" href="./articulo.html" title="Fray Perico acusado de maltrato animal">
+                  <h2 itemprop="headline name" class="post-title">Fray Perico acusado de maltrato animal</h2>
+                  <p itemprop="description" class="post-entry">Fray Perico ha sido acusado de maltrato animal, por la asociacion PETA</p>
+                </a>
+              </header>
+            </div>
+          </article>
+
+          <article class="section-list-article cat-cine" itemscope itemtype="http://schema.org/Article">
+            <div class="post-image">
+              <a itemprop="url" href="./articulo.html" title="No era su padre">
+                <img itemprop="image" src="https://placem.at/places?w=300&h=250&random=perico" title="No era su padre" alt="No era su padre" /></a>
+            </div>
+            <div class="post-content">
+              <div class="post-category">
+                <a itemprop="articleSection" href="" title="Star Wars">Star Wars</a>
+                |
+                <a itemprop="articleSection" href="" title="Cine">Cine</a>
+              </div>
+              <div class="post-author-date">
+                Publicado el
+                <time itemprop="datePublished" content="2017-11-11" datetime="2017-11-11">11 noviembre, 2017</time>
+                por
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">Luke</span>
+                </span>
+              </div>
+              <header class="post-header">
+                <a itemprop="url" href="./articulo.html" title="No era su padre">
+                  <h2 itemprop="headline name" class="post-title">No era su padre</h2>
+                  <p itemprop="description" class="post-entry">La prueba de ADN desmiente que sea su padre</p>
+                </a>
+              </header>
+            </div>
+          </article>
+
+          <article class="section-list-article cat-cine" itemscope itemtype="http://schema.org/Article">
+            <div class="post-image">
+              <a itemprop="url" href="./articulo.html" title="No era su padre">
+                <img itemprop="image" src="https://placem.at/places?w=300&h=250&random=perico" title="No era su padre" alt="No era su padre" /></a>
+            </div>
+            <div class="post-content">
+              <div class="post-category">
+                <a itemprop="articleSection" href="" title="Star Wars">Star Wars</a>
+                |
+                <a itemprop="articleSection" href="" title="Cine">Cine</a>
+              </div>
+              <div class="post-author-date">
+                Publicado el
+                <time itemprop="datePublished" content="2017-11-11" datetime="2017-11-11">11 noviembre, 2017</time>
+                por
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">Luke</span>
+                </span>
+              </div>
+              <header class="post-header">
+                <a itemprop="url" href="./articulo.html" title="No era su padre">
+                  <h2 itemprop="headline name" class="post-title">No era su padre</h2>
+                  <p itemprop="description" class="post-entry">La prueba de ADN desmiente que sea su padre</p>
+                </a>
+              </header>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    
+    <!-- footer -->
+    <footer id="footer">
+      <nav class="footer-menu"><ul><li>Inicio</li><li>Ayuda</li><li>Contacto</li></ul></nav>
+    </footer>
+  </div>
+</body>
+</html>
