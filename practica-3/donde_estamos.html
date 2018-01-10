@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/functions.js"></script>
+
+  <title>Práctica HTML5</title>
+
+</head>
+<body>
+  <div class="flex-container">
+    <!-- menu -->
+    <header id="header">
+      <div class="header-logo">
+        <div class="header-logo-image"><img src="https://placem.at/places?w=100&h=70" title="Blog del Curioso" alt="Blog del Curioso" /></div>
+        <div class="header-logo-name">
+          <h1 class="header-logo-title">Blog del Curioso</h1>
+          <span class="header-logo-subtitle">Tu blog chachiguay</span>
+        </div>
+      </div>
+      
+      <nav id="header-menu" class="header-menu">
+        <ul>
+          <li><a href="formulario.html" title="Mi perfil">Mi perfil</a></li>
+          <li><a href="#" title="Añadir Artículo">Añadir Artículo</a></li>
+          <li><a href="#" title="Añadir imagen">Añadir imagen</a></li>
+          <li><a href="#" title="Juegos">Juegos</a></li>
+          <li><a href="#" title="Chat">Chat</a></li>
+          <li><a href="#" title="Contacto">Contacto</a></li>
+          <li><a href="./donde_estamos.html" title="Donde estamos?">Donde estamos?</a></li>
+          <li><a href="./webworker.html" title="Donde estamos?">WebWorker</a></li>
+          <li class="conexion-status"><div id="conexion" class="conexion">Desconectado</div></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- content -->
+    <main id="content">
+      
+        <h1>Donde estamos?</h1>
+
+        <div id="map_geolocation" style="height: 400px; width: 100%;"></div>
+        
+        <script>
+          // Inicializamos el Mapa
+          function initMap() {
+            
+            // Valores inciales del mapa
+            var initial_pos = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map_geolocation'), {
+              zoom: 4,
+              center: initial_pos
+            });
+            
+            var marker = new google.maps.Marker({
+              position: initial_pos,
+              map: map
+            });
+
+            // Ventana de información con los datos iniciales
+            var infoWindow = new google.maps.InfoWindow({map: map});
+            infoWindow.setPosition(initial_pos);
+            infoWindow.setContent('Posicion Inicial: Uluru (Ayers Rock)');
+            infoWindow.open(map, marker);
+
+            // Geolocalizando
+            if (navigator.geolocation) {
+              // Para obtener la localización se usa getCurrentPosition(success, error, options), pero solo la localiza cuando se llama.
+              //      
+              // Pero en nuestro caso queremos que se actualice cada vez que se mueva,
+              // con lo cual usaremos watchPosition(success, error, options),
+              // como se puede ver es igual,salvo la diferencia de actializarse con el cambio de posición
+              navigator.geolocation.watchPosition(
+                function(position) {  // Success
+                  var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                  };
+
+                  infoWindow.setPosition(pos);
+                  infoWindow.setContent('Geolocalizado: <p style="margin-left: 20px;">Latitud -> ' + position.coords.latitude + '<br /> Longitud -> '+ position.coords.longitude + '</p>');
+                  map.setCenter(pos);
+                  marker.setPosition(pos)
+                },
+                function() {  // Error
+                  // Si no es posible la geolocalización pasamos true, para indicar que el navegador lo permite, pero que no es posible localizar
+                  showError(true, infoWindow, map.getCenter());
+                },
+                { // Options
+                  timeout: 5000,  // Tiempo maximo de espera
+                  maximumAge: 0   // Indicamos que no se use la cache de posicionamiento
+                });
+            } else {
+              // Si el navegador no soporta la geolocalización pasamos el valor como falso
+              showError(false, infoWindow, map.getCenter());
+            }
+          }
+
+          // Muestra los errores de la geolocalización
+          function showError(geolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(geolocation ?
+                                  'Error: La Geolocalización ha fallado' :
+                                  'Error: Tu navegador no soprta la Geolocalización');
+          }
+
+
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqbuMrfOdwSHTT3UI01nHwiXQLUSswdsc&callback=initMap"></script>
+
+    </main>
+    
+    <!-- footer -->
+    <footer id="footer">
+      <nav class="footer-menu"><ul><li>Inicio</li><li>Ayuda</li><li>Contacto</li></ul></nav>
+    </footer>
+  </div>
+</body>
+</html>
