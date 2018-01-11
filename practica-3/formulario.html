@@ -4,8 +4,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/functions.js"></script>
 
   <title>Práctica HTML51</title>
+
+  
+
+
 </head>
 <body>
   <div class="flex-container">
@@ -21,12 +26,15 @@
       
       <nav id="header-menu" class="header-menu">
         <ul>
-          <li><a href="formulario.html">Mi perfil</a></li>
-          <li><a href="#">Añadir Artículo</a></li>
-          <li><a href="#">Añadir imagen</a></li>
-          <li><a href="#">Juegos</a></li>
-          <li><a href="#">Chat</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="formulario.html" title="Mi perfil">Mi perfil</a></li>
+          <li><a href="#" title="Añadir Artículo">Añadir Artículo</a></li>
+          <li><a href="#" title="Añadir imagen">Añadir imagen</a></li>
+          <li><a href="#" title="Juegos">Juegos</a></li>
+          <li><a href="#" title="Chat">Chat</a></li>
+          <li><a href="#" title="Contacto">Contacto</a></li>
+          <li><a href="./donde_estamos.html" title="Donde estamos?">Donde estamos?</a></li>
+          <li><a href="./webworker.html" title="Donde estamos?">WebWorker</a></li>
+          <li class="conexion-status"><div id="conexion" class="conexion">Desconectado</div></li>
         </ul>
       </nav>
     </header>
@@ -35,43 +43,50 @@
     <main id="content" class="form">
 
       <h3>Mi perfil</h3>
-      <form id="myformu" action="#">
+      <form id="myformu" onsubmit="saveData();">
         <div class="element-left">
           <label for="name">Nombre</label>
-          <input type="text" name="name" placeholder="Jon" required autofocus />
+          <input type="text" name="name" id="name" placeholder="Jon" required autofocus />
         </div>
         <div class="element-right">
           <label for="lastname">Apellidos</label>
-          <input type="text" name="lastname" placeholder="Snow" required />
+          <input type="text" name="lastname" id="lastname" placeholder="Snow" required />
         </div>
         <div class="element-left">   
           <label for="phone">Teléfono</label>
-          <input type="tel" name="phone" pattern="[0-9]{9}" required title="ej: 615 615 615" />
+          <input type="tel" name="phone" id="phone" pattern="[0-9]{9}" required title="ej: 615 615 615" />
         </div>
         <div class="element-right">
           <label for="mail">Email</label>
-          <input type="email" name="mail" required />
+          <input type="email" name="mail" id="mail" required />
         </div>
         <div class="element-left">
           <label for="date">Fecha de nacimiento</label>
-          <input type="date" name="date" required />
+          <input type="date" name="date" id="date" required />
         </div>
         <div class="element-right">      
           <label for="height">Altura</label>
-          <input type="number" name="height" pattern="[0-9]{3}" min="40" max="250" required title="ej: 185" />
+          <input type="number" name="height" id="height" pattern="[0-9]{3}" min="40" max="250" required />
         </div>
         <div class="element-left">        
           <label for="color">Color favorito</label>
-          <input type="color" name="color" value="#f31e1e" required />
+          <input type="color" name="color" id="color" value="#f31e1e" required />
         </div>
         <div class="element-right">  
           <label for="web">Web</label>
-          <input type="url" name="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required  title="ej: http://www.ejemplo.com" />
+          <input type="url" name="web" id="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required />
+        </div>
+        <div class="element-left">
+          <input type="file" style="display:block" id="upload-image" multiple="multiple"></input>
+         </div>
+        <div class="element-right">
+          <div id="imagen"> Imagen Capturada </div>
         </div>
         <div class="element-left">        
           <input type="submit" value="Save">       
           <input type="reset"  value="Cancel">
         </div>
+
        </form>
     </main>
       
