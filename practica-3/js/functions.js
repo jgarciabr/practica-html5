@@ -43,9 +43,66 @@ function webworker_init(){
   worker.postMessage(document.getElementById("value").value);
 }
 
+//Función que recupear datos de localstorage y muestra en formulario
+function getData(){
+  var user = JSON.parse(localStorage.getItem("user"));
+  if(user){
+    vname     = user.name;
+    vlastname = user.lastname;
+    vphone    = user.phone;
+    vmail     = user.mail;
+    vdate     = user.date;
+    vheight   = user.height;
+    vcolor    = user.color;
+    vweb      = user.web;
 
-//función
+    document.getElementById("name").value     = (vname) ? vname : '';
+    document.getElementById("lastname").value = vlastname;
+    document.getElementById("phone").value    = vphone;
+    document.getElementById("mail").value     = vmail;
+    document.getElementById("date").value     = vdate;
+    document.getElementById("height").value   = vheight;
+    document.getElementById("color").value    = vcolor;
+    document.getElementById("web").value      = vweb;
+  }
+}
+
+//función que recupera los datos del formulaio y los guarda en localstorage
+function saveData(){
+
+  vname     = document.getElementById("name").value;
+  vlastname = document.getElementById("lastname").value;
+  vphone    = document.getElementById("phone").value;
+  vmail     = document.getElementById("mail").value;
+  vdate     = document.getElementById("date").value;
+  vheight   = document.getElementById("height").value;
+  vcolor    = document.getElementById("color").value;
+  vweb      = document.getElementById("web").value;
+
+
+  var user = {
+    name:vname,
+    lastname:vlastname,
+    phone:vphone,
+    mail:vmail,
+    date:vdate,
+    height:vheight,
+    color:vcolor,
+    web:vweb
+  };
+
+  if(!localStorage.setItem("user",JSON.stringify(user))){
+    console.log ("Datos guardados correctamente");
+    return false;
+  }else{
+    console.log ("Se produjo un error al guardar los Datos");
+    return false;  }
+}
+
+
 document.addEventListener("DOMContentLoaded", function(event) { 
+//Lamamos a la función que recupera los datos del localstorage
+getData();
 
 var fileInput = document.getElementById("upload-image");
 var divIMG = document.getElementById("imagen");
@@ -91,5 +148,6 @@ function showImg(files){
   
   }
 }
+
 });
 
