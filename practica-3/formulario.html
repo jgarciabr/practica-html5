@@ -4,13 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/style.css">
-  <script type="text/javascript" src="./js/functions.js"></script>
-  <script type="text/javascript" src="./js/formulario.js"></script>
-
+  <script src="./js/functions.js"></script>
+  <script src="./js/fomulario.js"></script>
   <title>Práctica HTML51</title>
-
-  
-
 
 </head>
 <body>
@@ -67,18 +63,18 @@
         </div>
         <div class="element-right">      
           <label for="height">Altura</label>
-          <input type="number" name="height" id="height" pattern="[0-9]{3}" min="40" max="250" required />
+          <input type="number" name="height" id="height" min="40" max="250" required />
         </div>
         <div class="element-left">        
           <label for="color">Color favorito</label>
-          <input type="color" name="color" id="color" value="#f31e1e" required />
+          <input type="color" name="color" id="color" value="#f31e1e" />
         </div>
         <div class="element-right">  
           <label for="web">Web</label>
           <input type="url" name="web" id="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required />
         </div>
         <div class="element-left">
-          <input type="file" style="display:block" id="upload-image" multiple="multiple"></input>
+          <input type="file" id="photo" name="photo" accept="image/*" />
          </div>
         <div class="element-right">
           <div id="imagen"> Imagen Capturada </div>

@@ -38,35 +38,35 @@
       <form id="myformu" action="#">
         <div class="element-left">
           <label for="name">Nombre</label>
-          <input type="text" name="name" placeholder="Jon" required autofocus />
+          <input type="text" name="name" id="name" placeholder="Jon" required autofocus />
         </div>
         <div class="element-right">
           <label for="lastname">Apellidos</label>
-          <input type="text" name="lastname" placeholder="Snow" required />
+          <input type="text" name="lastname" id="lastname" placeholder="Snow" required />
         </div>
         <div class="element-left">   
           <label for="phone">Teléfono</label>
-          <input type="tel" name="phone" pattern="[0-9]{9}" required title="ej: 615 615 615" />
+          <input type="tel" name="phone" id="phone" pattern="[0-9]{9}" required title="ej: 615 615 615" />
         </div>
         <div class="element-right">
           <label for="mail">Email</label>
-          <input type="email" name="mail" required />
+          <input type="email" name="mail" id="mail" required />
         </div>
         <div class="element-left">
           <label for="date">Fecha de nacimiento</label>
-          <input type="date" name="date" required />
+          <input type="date" name="date" id="date" required />
         </div>
         <div class="element-right">      
           <label for="height">Altura</label>
-          <input type="number" name="height" pattern="[0-9]{3}" min="40" max="250" required title="ej: 185" />
+          <input type="number" name="height" id="height" min="40" max="250" required />
         </div>
         <div class="element-left">        
           <label for="color">Color favorito</label>
-          <input type="color" name="color" value="#f31e1e" required />
+          <input type="color" name="color" id="color" value="#f31e1e" />
         </div>
         <div class="element-right">  
           <label for="web">Web</label>
-          <input type="url" name="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required  title="ej: http://www.ejemplo.com" />
+          <input type="url" name="web" id="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required />
         </div>
         <div class="element-left">        
           <input type="submit" value="Save">       

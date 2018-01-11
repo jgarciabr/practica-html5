@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 //Lamamos a la función que recupera los datos del localstorage
 getData();
 
-var fileInput = document.getElementById("upload-image");
+var fileInput = document.getElementById("photo");
 var divIMG = document.getElementById("imagen");
 
 //Creamos listener que se accciona al resgistrar un cambio en el upload
@@ -104,4 +104,6 @@ function showImg(files){
   }
 }
 
+
 });
+
