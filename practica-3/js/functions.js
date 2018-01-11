@@ -18,8 +18,8 @@ window.onload = function() {
   // Si existe el mapa, verificamos si es https, en caso contrario se redirigira a https
   // Esto lo hacemos por que los metodos de posicionamiento ya no se pueden ejecutar sobre sitios no seguros
   if(typeof document.getElementById("map_geolocation")!=="undefined"){ 
-    if (location.protocol != 'http:') {
-      location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
+    if (location.protocol != 'https:') {
+      location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
     }
   }  
 
