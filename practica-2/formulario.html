@@ -36,24 +36,42 @@
 
       <h3>Mi perfil</h3>
       <form id="myformu" action="#">
-        <label for="name">Nombre</label>
-        <input type="text" name="name" placeholder="Jon" required />
-        <label for="lastname">Apellidos</label>
-        <input type="text" name="lastname" placeholder="Jon" required />
-        <label for="phone">Teléfono</label>
-        <input type="tel" name="phone" placeholder="" pattern="[0-9]{9}" required title="ej: 615 615 615" />
-        <label for="mail">Email</label>
-        <input type="email" name="mail" placeholder="" required />
-        <label for="date">Fecha de nacimiento</label>
-        <input type="date" name="date" placeholder="" required />
-        <label for="height">Altura</label>
-        <input type="number" name="height" pattern="[0-9]{3}" required title="ej: 185" />
-        <label for="color">Color</label>
-        <input type="color" name="color" placeholder="" required />
-        <label for="web">Web</label>
-        <input type="url" name="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required  title="ej: http://www.ejemplo.com" />
-        <input type="submit" value="Save">
-        <input type="reset"  value="Cancel">
+        <div class="element-left">
+          <label for="name">Nombre</label>
+          <input type="text" name="name" placeholder="Jon" required autofocus />
+        </div>
+        <div class="element-right">
+          <label for="lastname">Apellidos</label>
+          <input type="text" name="lastname" placeholder="Snow" required />
+        </div>
+        <div class="element-left">   
+          <label for="phone">Teléfono</label>
+          <input type="tel" name="phone" pattern="[0-9]{9}" required title="ej: 615 615 615" />
+        </div>
+        <div class="element-right">
+          <label for="mail">Email</label>
+          <input type="email" name="mail" required />
+        </div>
+        <div class="element-left">
+          <label for="date">Fecha de nacimiento</label>
+          <input type="date" name="date" required />
+        </div>
+        <div class="element-right">      
+          <label for="height">Altura</label>
+          <input type="number" name="height" pattern="[0-9]{3}" required title="ej: 185" />
+        </div>
+        <div class="element-left">        
+          <label for="color">Color favorito</label>
+          <input type="color" name="color" value="#f31e1e" required />
+        </div>
+        <div class="element-right">  
+          <label for="web">Web</label>
+          <input type="url" name="web" pattern="https?://.+" placeholder="http://www.ejemplo.com" required  title="ej: http://www.ejemplo.com" />
+        </div>
+        <div class="element-left">        
+          <input type="submit" value="Save">       
+          <input type="reset"  value="Cancel">
+        </div>
        </form>
     </main>
       

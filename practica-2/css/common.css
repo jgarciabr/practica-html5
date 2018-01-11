@@ -74,8 +74,8 @@ html, body {
 
 .header-menu li a{
 	display: block;
-    padding: 10px 20px;
-	color: #000;
+	padding: 10px 20px;
+	color: #888181;
 	text-decoration: none;
 }
 
@@ -88,13 +88,19 @@ html, body {
 	margin-top: 30px;
 }
 
+.footer-menu {
+	border-top:1px solid #e2e1e1;
+}
+
 .footer-menu ul{
 	display: flex;
 	list-style: none;
 }
 
 .footer-menu li{
-	padding: 10px 20px;
+	padding: 10px 10px;
+	color: #a9a7a7;
+	font-size: 11px;
 }
 
 .footer-menu li:first-child{
