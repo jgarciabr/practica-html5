@@ -68,3 +68,10 @@ h3:after{
 .element-right{
 	grid-column:2;
 }
+
+input:invalid{
+    background-color: #fbdbdb;
+}
+input:valid{
+    background-color: #e0efd7;
+}
